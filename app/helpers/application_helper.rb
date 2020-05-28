@@ -1,2 +1,12 @@
 module ApplicationHelper
+  # ヘルパーのメゾット実行のタイミングがわからない
+  
+  def full_title(page_name = "")
+    base_title = "AttendanceApp"
+    if page_name.empty?# 引数を受け取っているか確認emptyは空文字確認）
+      base_title
+    else
+      page_name + "|" + base_title
+    end
+  end
 end
